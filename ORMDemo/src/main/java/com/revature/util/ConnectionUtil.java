@@ -5,6 +5,10 @@ import org.hibernate.cfg.Configuration;
 
 public class ConnectionUtil {
 	
+	private ConnectionUtil() {
+		super();
+	}
+	
 	private static SessionFactory sessionFactory;
 	
 	public static SessionFactory getSessionFactory() {
