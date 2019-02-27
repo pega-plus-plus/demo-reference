@@ -11,6 +11,7 @@ public class Driver {
 		
 		SessionFactory sf = ConnectionUtil.getSessionFactory();
 		//create a session
+		
 		Session s = sf.getCurrentSession();
 		System.out.println(s.getStatistics());
 		s.close();
