@@ -5,14 +5,15 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.revature.beans.Category;
 import com.revature.beans.Flashcard;
 import com.revature.repositories.FlashcardRepository;
 
-@Service 
+@Service
 public class FlashcardService {
-	
+
 	private FlashcardRepository fr;
-	
+
 	@Autowired
 	public void setFlashcardRepository(FlashcardRepository fr) {
 		this.fr = fr;
@@ -20,5 +21,9 @@ public class FlashcardService {
 
 	public List<Flashcard> getAllFlashcards() {
 		return fr.findAll();
+	}
+
+	public List<Flashcard> getFlashcardsByCategory(Category c) {
+		return fr.getByCategory(c);
 	}
 }
