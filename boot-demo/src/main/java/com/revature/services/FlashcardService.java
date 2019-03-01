@@ -26,4 +26,8 @@ public class FlashcardService {
 	public List<Flashcard> getFlashcardsByCategory(Category c) {
 		return fr.getByCategory(c);
 	}
+	
+	public void addFlashcard(Flashcard f) {
+		fr.save(f);
+	}
 }
